@@ -23,6 +23,12 @@ export PATH="$HOME/bin:$PATH"
 ```
 `HOME`出现的第一行后面引号内的内容将会是你打开Git命令行后进入的默认目录。
 - 重启Git for Windows，生效。
+**注意事项**：在设置好新的主目录后，需要将之前主目录的两个隐藏文件拷贝到新的主目录。
+一个是`.ssh`文件夹，这里保存了你这台电脑的私钥和`GitHub`的公钥信息，私钥保存在`id_rsa`文件，公钥保存在`id_rsa.pub`文件；另一个是 `.gitconfig`文件，这里保存了你的`Git`设置信息，一般是电子邮件地址和用户名，即你在`Git`命令行输入下面两行代码生成的信息：
+```
+git config --global user.email "billwen28@gmail.com"
+git config --global user.name "cddbysj"
+```
 ## 配置Sublime Text为Git for Windows的默认文本编辑器
 强烈建议先配置了Git for Windows的`$HOME`界面再操作这一步。主要步骤如下：
 在Git for Windows的HOME目录新建一个`.bashrc`文件，在Windows XP下实现这一步最简便的方式是通过命令行。打开Git for Windows，输入以下命令：
